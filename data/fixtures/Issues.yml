@@ -1,0 +1,36 @@
+Issue:
+  issue_1:
+    Author: lan
+    body:   |
+      Long Live Manetheren
+    status: closed
+    Comments:
+      issue_3_comment_1:
+        body: Long Live the King
+        Author: admin
+    Tags:
+      tag_1:
+        name:   Manetheren
+      tag_2:
+        name:   Tarmon Gaidon
+  issue_2:
+    Author: whistletrunk
+    body:   |
+      I found this problem with your code.  It would take me about as long to fix it 
+      as it has to type this message, but rather than fix it myself I really think you
+      should fix it.
+    status: open
+    Tags:
+      tag_3:
+        name:   Important
+      tag_4:
+        name:   FIX IT!  issue_3:
+    Author: whistletrunk
+    body:   |
+      I found ANOTHER problem!  plz fix before my boss sees!  Thnx in advance.
+    status: unread
+    Tags:
+      tag_3:
+        name:   Important
+      tag_4:
+        name:   FIX IT!

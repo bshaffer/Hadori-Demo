@@ -1,0 +1,23 @@
+generator:
+  class: sfHadoriGenerator
+  param:
+    model_class:           Tag
+    theme:                 hadori
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          tag
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    use_security_yaml_credentials: false
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
+      export:  ~

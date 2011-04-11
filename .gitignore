@@ -1,0 +1,9 @@
+cache/*
+log/*
+web/uploads/*
+config/databases.yml
+config/system.yml
+lib/vendor/symfony
+*.DS_Store
+data/sql/schema.sql
+nbproject

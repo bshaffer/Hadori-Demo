@@ -1,0 +1,74 @@
+sfGuardUser:
+  bshaffer:
+    first_name:     Brent
+    last_name:      Shaffer
+    email_address:  bshafs@gmail.com
+    username:       bshaffer
+    password:       nice-try-but-this-aint-my-password
+    is_super_admin: true
+
+  admin:
+    first_name:     Site
+    last_name:      Admin
+    email_address:  admin@hadori.com
+    username:       admin
+    password:       admin
+
+  assistant:
+    first_name:     Site
+    last_name:      Assistant
+    email_address:  assistant@hadori.com
+    username:       assistant
+    password:       assistant
+
+  ozwald:
+    first_name: Ozwald
+    last_name:  Cobblepot
+    email_address:  ozwald.cobblepot@gmail.com
+    username:   ozwald
+    password:   testuser
+    is_active:  true
+
+  whistletrunk:
+    first_name: Johann
+    last_name:  Whistletrunk
+    email_address:  johann.whistletrunk@gmail.com
+    username:   whistletrunk
+    password:   testuser
+    is_active:  true
+
+  hotpie:
+    first_name: Hotpie
+    last_name:  
+    email_address:  hotpie@gmail.com
+    username:   hotpie
+    password:   testuser
+    is_active:  true
+
+  lan:
+    first_name: al'Lan
+    last_name:  Mandragoran
+    email_address:  lan.mandragoran@gmail.com
+    username:   lan
+    password:   testuser
+    is_active:  true
+
+sfGuardPermission:
+  admin_permission:
+    name:           admin
+    description:    Administrator permission
+
+sfGuardGroup:
+  admin_group:
+    name:           admin
+    description:    Administrator group
+
+sfGuardGroupPermission:
+  sggp_admin:
+    Group:       admin_group
+    Permission:  admin_permission
+
+sfGuardUserGroup:
+  sgug_admin:
+    Group:       admin_group
+    User:        admin

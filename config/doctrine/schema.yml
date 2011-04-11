@@ -1,0 +1,123 @@
+PullRequest:
+  actAs:    [Timestampable]
+  columns:
+    author_id:
+      type:         integer
+      notnull:      true
+    body:
+      type:         string(255)
+      notnull:      true
+    status:
+      type:         enum
+      values:       [open, closed, pending]
+      notnull:      true
+      default:      pending
+  relations:
+    Author:
+      local:        author_id
+      class:        sfGuardUser
+      foreignAlias: PullRequests
+      onDelete:     CASCADE
+      
+PullRequestComment:
+  actAs:    [Timestampable]
+  columns:
+    pull_request_id:
+      type:         integer
+      notnull:      true
+    author_id:
+      type:         integer
+      notnull:      true
+    body:
+      type:         clob
+      notnull:      true
+  relations:
+    PullRequest:
+      foreignAlias: Comments
+      onDelete:     CASCADE
+    Author:
+      local:        author_id
+      class:        sfGuardUser
+      foreignAlias: PullRequestComments
+      onDelete:     CASCADE
+
+Issue:
+  actAs:    [Timestampable, Sortable]
+  columns:
+    author_id:
+      type:         integer
+      notnull:      true
+    body:
+      type:         clob
+      notnull:      true
+    status:
+      type:         enum
+      values:       [open, closed, unread]
+      notnull:      true
+      default:      unread
+    date_closed:
+      type:         timestamp
+  relations:
+    Author:
+      local:        author_id
+      class:        sfGuardUser
+      foreignAlias: Issues
+      onDelete:     CASCADE
+    Tags:
+      class:        Tag
+      refClass:     IssueTag
+      foreignAlias: Issues
+
+IssueComment:
+  actAs:    [Timestampable]
+  columns:
+    issue_id:
+      type:         integer
+      notnull:      true
+    author_id:
+      type:         integer
+      notnull:      true
+    body:
+      type:         clob
+      notnull:      true
+  relations:
+    Issue:
+      foreignAlias: Comments
+      onDelete:     CASCADE
+    Author:
+      local:        author_id
+      class:        sfGuardUser
+      foreignAlias: IssueComments
+      onDelete:     CASCADE
+      
+IssueTag:
+  actAs:            [Timestampable]
+  columns:
+    issue_id:
+      type:         integer
+      notnull:      true
+    tag_id:
+      type:         integer
+      notnull:      true
+  relations:
+    Issues:
+      class:        Issue
+      foreignAlias: IssueTags
+      onDelete:     CASCADE
+    Tags:
+      class:        Tag
+      foreignAlias: IssueTags
+      onDelete:     CASCADE
+      
+Tag:
+  actAs:            [Timestampable]
+  columns:
+    name:
+      type:         string(255)
+      notnull:      true
+    text_color:
+      type:         string(255)
+      default:      '#333'
+    background_color:
+      type:         string(255)
+      default:      '#FFF'

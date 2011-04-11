@@ -1,0 +1,29 @@
+generator:
+  class: sfHadoriGenerator
+  param:
+    model_class:           Issue
+    theme:                 hadori
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    sortable:              true
+    i18n:                  true
+    route_prefix:          issue
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    use_security_yaml_credentials: true
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:  Issues
+        display:  [Author, body, status, date_closed, _tags]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
+      show: 
+        display:  [Author, body, status, created_at, _tags]
+      export:  ~

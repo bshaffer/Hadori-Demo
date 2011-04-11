@@ -1,0 +1,38 @@
+PullRequest:
+  pull_request_1:
+    body:   |
+      Pull This Shizzle, Yo!
+      <br />
+      <img src="/images/pull_request_serious.jpeg" />
+    Author: ozwald
+    status: closed
+    Comments:
+      pr_comment_1:
+        body: |
+          <img src="/images/pull_request_bell.jpeg" />
+        Author: admin
+      pr_comment_2:
+        body: |
+          <img src="/images/pull_request_interesting.jpeg" />
+        Author: ozwald
+      pr_comment_3:
+        body: |
+          <img src="/images/pull_request_yodawg.jpeg" />
+        Author: admin
+  pull_request_2:
+    body:   |
+      Thanks for all your hard work.  I'd like to contribute some half-assed work in order to gain some credit.
+      <br />
+      <img src="/images/pull_request_sam.jpeg" />
+    Author: hotpie
+    status: closed
+    Comments:
+      pr_comment_4:
+        body: |
+          <img src="/images/pull_request_sparta.jpeg" />
+        Author: admin
+      pr_comment_5:
+        body: |
+          <img src="/images/pull_request_kanye.jpeg" />
+        Author: hotpie    
+  

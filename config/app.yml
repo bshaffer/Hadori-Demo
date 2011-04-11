@@ -1,0 +1,4 @@
+# default values
+all:
+  hadori:
+    include_assets: false

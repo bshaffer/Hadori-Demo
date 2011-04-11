@@ -1,0 +1,29 @@
+generator:
+  class: sfHadoriGenerator
+  param:
+    model_class:           PullRequest
+    theme:                 hadori
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          pull_request
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    use_security_yaml_credentials: false
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:  Pull Requests
+        display:  [Author, body, status]
+        actions:
+          _export:  ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
+      show: 
+        display:  [Author, body, status, created_at, _comments]
+      export:  ~

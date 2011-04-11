@@ -1,0 +1,57 @@
+generator:
+  class: sfHadoriGenerator
+  param:
+    model_class:           sfGuardUser
+    theme:                 hadori
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    class_label:           User
+    plural:                ~
+    i18n:                  true
+    route_prefix:          sf_guard_user
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    use_security_yaml_credentials: false
+
+    config:
+      actions:
+        _edit:
+          title:    Edit %%first_name%%
+          route:    @sf_guard_user_edit?id=%%id%%
+      fields:
+        first_name: { credentials: [bogus] }
+      list:
+        title:  Users
+        display:  
+          - first_name
+          - last_name
+          - =email_address
+          - created_at
+        pager_max_per_page: 10
+        actions:
+          _export:
+            route:    @sf_guard_user_export
+      filter:  ~
+      form:    ~
+      edit:
+        title:  Edit '%%first_name%% %%last_name%%'
+      new:     ~
+      show:
+        title:  '%%first_name%% %%last_name%%'
+        display:  
+          - id
+          - first_name
+          - last_name
+          - email_address
+          - is_active
+          - is_super_admin
+          - last_login
+          created_at: { date_format: 'F jS, Y' }
+      export: 
+        title:  Export Users
+        display:
+          - id
+          first_name: { credentials: [bogusz] }
+          - last_name
+          - email_address

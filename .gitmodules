@@ -1,0 +1,6 @@
+[submodule "plugins/sfHadoriThemePlugin"]
+	path = plugins/sfHadoriThemePlugin
+	url = git@github.com:bshaffer/sfHadoriThemePlugin.git
+[submodule "plugins/sfThemeGeneratorPlugin"]
+	path = plugins/sfThemeGeneratorPlugin
+	url = git@github.com:bshaffer/sfThemeGeneratorPlugin.git

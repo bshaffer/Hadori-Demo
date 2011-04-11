@@ -1,0 +1,19 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Hadori Demo
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - /sfHadoriThemePlugin/css/theme.css
+    - /sfHadoriThemePlugin/css/hadori.css
+
+  javascripts:     []
+
+  has_layout:     true
+  layout:         layout
