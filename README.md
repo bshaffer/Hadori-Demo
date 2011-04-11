@@ -1,6 +1,7 @@
 Hadori Demo
 ===========
-Symfony Release 1.4.11
+
+Please view this demo at [http://brentertainment.com/hadori](http://brentertainment.com/hadori)
 
 In order to get this project off the ground, follow these steps:
 
