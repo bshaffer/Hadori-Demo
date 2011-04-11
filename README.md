@@ -18,6 +18,8 @@ Init your git submodules
 
 Copy config/database.yml.dist to config/database.yml and configure the file with the proper credentials
 
+      $ cp config/databases.yml.dist config/databases.yml
+
 Afer you configure your database, have doctrine set up tables and fixtures with the "build" command
 
       $ php symfony doctrine:build --all --and-load
