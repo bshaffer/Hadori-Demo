@@ -7,9 +7,9 @@ In order to get this project off the ground, follow these steps:
 Symlink your symfony core library directory.  If you do not have the core symfony library on your machine, you'll need to export it first.
 
       # Export the symfony release if you do not already have it
-      $ svn export http://svn.symfony-project.com/tags/RELEASE_1_4_6 /usr/local/lib/symfony/RELEASE_1_4_6
+      $ svn export http://svn.symfony-project.com/tags/RELEASE_1_4_11 /usr/local/lib/symfony/RELEASE_1_4_11
       # Symlink in lib/vendor directory
-      $ ln -s /usr/local/lib/symfony/RELEASE_1_4_6 lib/vendor/symfony
+      $ ln -s /usr/local/lib/symfony/RELEASE_1_4_11 lib/vendor/symfony
 
 Init your git submodules
 
