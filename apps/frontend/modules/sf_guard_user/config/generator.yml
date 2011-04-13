@@ -16,42 +16,61 @@ generator:
 
     config:
       actions:
-        _edit:
-          title:    Edit %%first_name%%
-          route:    @sf_guard_user_edit?id=%%id%%
+        make_assistant:
+          title:    Make %%to_string%% an assistant
+          # this works, but is not recommended:
+          # route:    @sf_guard_user_edit?id=%%id%% 
+          # use this instead:
+          route:    sf_guard_user_make_assistant
       fields:
-        first_name: { credentials: [bogus] }
+        # credit card fields are only visible to the admin everywhere in the module
+        credit_card_number: { credentials: [admin] }
+        credit_card_type:   { credentials: [admin] }
+        credit_card_expiry: { credentials: [admin] }
       list:
         title:  Users
-        display:  
+        display:
+          - =username
           - first_name
           - last_name
-          - =email_address
+          - email_address
           - created_at
+          # the credit card info partial is rendered in the list view only for admins
+          _credit_card_info: { label: Credit Information, credentials: [admin] }
         pager_max_per_page: 10
-        actions:
-          _export:
-            route:    @sf_guard_user_export
       filter:  ~
       form:    ~
       edit:
+        # This could also be:
+        # title: Edit '%%to_string%%'
         title:  Edit '%%first_name%% %%last_name%%'
       new:     ~
       show:
         title:  '%%first_name%% %%last_name%%'
         display:  
           - id
+          - username
           - first_name
           - last_name
           - email_address
           - is_active
           - is_super_admin
+          - credit_card_number
+          - credit_card_type
+          # set a special date format just for the show view.  Note that the credit_card_expiry column is a varchar in the database, but this is overriden with "type"
+          credit_card_expiry: { date_format: 'F, Y', type: Date }
           - last_login
+          # set the date format for fields of type: Date
           created_at: { date_format: 'F jS, Y' }
       export: 
         title:  Export Users
         display:
           - id
-          first_name: { credentials: [bogusz] }
+          - username
+          - first_name
           - last_name
-          - email_address
+          # email addresses are only exportable if the user has the "can_export_email" credential OR the "admin" credential
+          email_address: { credentials: [[can_export_email, admin]] } 
+          - credit_card_number
+          - credit_card_type
+          - credit_card_expiry

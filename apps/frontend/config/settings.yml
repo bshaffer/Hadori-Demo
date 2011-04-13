@@ -35,3 +35,10 @@ all:
 
     login_module:           sfGuardAuth   # To be called when a non-authenticated user
     login_action:           signin         # Tries to access a secure page
+    
+    check_lock:             true
+    
+    starting_id:            100
+    sadmin_password:        1lksjdfKDJF
+    
+<?php if(file_exists(dirname(__FILE__).'/system.yml')) require_once(dirname(__FILE__).'/system.yml') ?>

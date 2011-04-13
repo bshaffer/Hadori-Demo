@@ -15,6 +15,9 @@
  * @property boolean $is_active
  * @property boolean $is_super_admin
  * @property timestamp $last_login
+ * @property string $credit_card_number
+ * @property string $credit_card_type
+ * @property string $credit_card_expiry
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
  * @property Doctrine_Collection $sfGuardUserPermission
@@ -36,6 +39,9 @@
  * @method boolean               getIsActive()              Returns the current record's "is_active" value
  * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
+ * @method string                getCreditCardNumber()      Returns the current record's "credit_card_number" value
+ * @method string                getCreditCardType()        Returns the current record's "credit_card_type" value
+ * @method string                getCreditCardExpiry()      Returns the current record's "credit_card_expiry" value
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
  * @method Doctrine_Collection   getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
@@ -56,6 +62,9 @@
  * @method sfGuardUser           setIsActive()              Sets the current record's "is_active" value
  * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
+ * @method sfGuardUser           setCreditCardNumber()      Sets the current record's "credit_card_number" value
+ * @method sfGuardUser           setCreditCardType()        Sets the current record's "credit_card_type" value
+ * @method sfGuardUser           setCreditCardExpiry()      Sets the current record's "credit_card_expiry" value
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
  * @method sfGuardUser           setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
@@ -121,6 +130,18 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              ));
         $this->hasColumn('last_login', 'timestamp', null, array(
              'type' => 'timestamp',
+             ));
+        $this->hasColumn('credit_card_number', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('credit_card_type', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('credit_card_expiry', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
 
 

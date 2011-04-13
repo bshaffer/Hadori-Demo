@@ -10,4 +10,10 @@
  */
 class sf_guard_userActions extends autoSf_guard_userActions
 {
+  public function getBaseQuery()
+  {
+    return Doctrine_Core::getTable('sfGuardUser')
+      ->createQuery()
+      ->whereNotIn('username', array('bshaffer', 'admin', 'assistant'));
+  }
 }

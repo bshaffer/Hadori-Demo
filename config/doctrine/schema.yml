@@ -1,3 +1,9 @@
+sfGuardUser:
+  columns:
+    credit_card_number:  string(255)
+    credit_card_type:    string(255)
+    credit_card_expiry:  string(255)
+    
 PullRequest:
   actAs:    [Timestampable]
   columns:

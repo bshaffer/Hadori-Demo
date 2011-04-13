@@ -1,6 +1,10 @@
 <?php use_helper('I18N') ?>
 
-<em>Username: admin, Password: admin</em>
+
+<dl>
+  <dt>Username</dt><dd>admin</dd>
+  <dt>Password</dt><dd>admin</dd>
+</dl>
 
 <div>  
   <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post" id="login-form">

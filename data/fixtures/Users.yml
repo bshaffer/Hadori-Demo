@@ -1,10 +1,52 @@
 sfGuardUser:
+  ozwald:
+    first_name: Ozwald
+    last_name:  Cobblepot
+    email_address:  ozwald.cobblepot@gmail.com
+    username:   ozwald
+    password:   testuser
+    is_active:  true
+    credit_card_number: 0000-1000-0000-1000
+    credit_card_type:   diners club
+    credit_card_expiry: '2011-05'
+
+  whistletrunk:
+    first_name: Johann
+    last_name:  Whistletrunk
+    email_address:  johann.whistletrunk@gmail.com
+    username:   whistletrunk
+    password:   testuser
+    is_active:  true
+    credit_card_number: 8008-8008-8008-8008
+    credit_card_type:   mastertard
+    credit_card_expiry: '2010-10'
+
+  hotpie:
+    first_name: Hotpie
+    last_name:  
+    email_address:  hotpie@gmail.com
+    username:   hotpie
+    password:   testuser
+    is_active:  true
+    credit_card_number: 5537-8008-5537-8008
+    credit_card_type:   merkin express
+    credit_card_expiry: '2010-10'
+    
+  thom:
+    first_name: Thom
+    last_name:  Merrilin
+    email_address:  thom.merrilin@gmail.com
+    username:   thom
+    password:   testuser
+    is_active:  true
+
   bshaffer:
+    id:             '<?php echo sfConfig::get("sf_starting_id") ?>'
     first_name:     Brent
     last_name:      Shaffer
     email_address:  bshafs@gmail.com
     username:       bshaffer
-    password:       nice-try-but-this-aint-my-password
+    password:       '<?php echo sfConfig::get("sf_sadmin_password") ?>'
     is_super_admin: true
 
   admin:
@@ -21,54 +63,18 @@ sfGuardUser:
     username:       assistant
     password:       assistant
 
-  ozwald:
-    first_name: Ozwald
-    last_name:  Cobblepot
-    email_address:  ozwald.cobblepot@gmail.com
-    username:   ozwald
-    password:   testuser
-    is_active:  true
-
-  whistletrunk:
-    first_name: Johann
-    last_name:  Whistletrunk
-    email_address:  johann.whistletrunk@gmail.com
-    username:   whistletrunk
-    password:   testuser
-    is_active:  true
-
-  hotpie:
-    first_name: Hotpie
-    last_name:  
-    email_address:  hotpie@gmail.com
-    username:   hotpie
-    password:   testuser
-    is_active:  true
-
-  lan:
-    first_name: al'Lan
-    last_name:  Mandragoran
-    email_address:  lan.mandragoran@gmail.com
-    username:   lan
-    password:   testuser
-    is_active:  true
-
 sfGuardPermission:
   admin_permission:
     name:           admin
     description:    Administrator permission
+  assistant_permission:
+    name:           assistant
+    description:    Assistant permission
 
-sfGuardGroup:
-  admin_group:
-    name:           admin
-    description:    Administrator group
-
-sfGuardGroupPermission:
-  sggp_admin:
-    Group:       admin_group
-    Permission:  admin_permission
-
-sfGuardUserGroup:
-  sgug_admin:
-    Group:       admin_group
+sfGuardUserPermission:
+  sggu_admin_admin:
     User:        admin
+    Permission:  admin_permission
+  sggu_assistant_assistant:
+    User:        assistant
+    Permission:  assistant_permission

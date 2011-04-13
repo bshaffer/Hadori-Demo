@@ -1,18 +1,18 @@
 Issue:
   issue_1:
-    Author: lan
+    Author: thom
     body:   |
-      Long Live Manetheren
+      Your social acumen is lacking
     status: closed
     Comments:
       issue_3_comment_1:
-        body: Long Live the King
+        body: Go bugger yourself
         Author: admin
     Tags:
       tag_1:
-        name:   Manetheren
+        name:   Uncouth
       tag_2:
-        name:   Tarmon Gaidon
+        name:   Sponge
   issue_2:
     Author: whistletrunk
     body:   |
@@ -24,7 +24,8 @@ Issue:
       tag_3:
         name:   Important
       tag_4:
-        name:   FIX IT!  issue_3:
+        name:   FIX IT!  
+  issue_3:
     Author: whistletrunk
     body:   |
       I found ANOTHER problem!  plz fix before my boss sees!  Thnx in advance.

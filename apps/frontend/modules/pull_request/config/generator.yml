@@ -19,7 +19,7 @@ generator:
         title:  Pull Requests
         display:  [Author, body, status]
         actions:
-          _export:  ~
+          export:  ~
       filter:  ~
       form:    ~
       edit:    ~
