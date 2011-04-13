@@ -15,6 +15,7 @@ class ProjectConfiguration extends sfProjectConfiguration
       'sfDoctrinePlugin',
       'sfDoctrineGuardPlugin',
       'sfFormExtraPlugin',
+      'sfGoogleAnalyticsPlugin',
       'sfTaskExtraPlugin',
       'csDoctrineActAsSortablePlugin',
       'sfThemeGeneratorPlugin',
