@@ -13,6 +13,7 @@
       <div id="header">
         <div id="public-nav">
           <?php if ($sf_user->isAuthenticated()): ?>
+            <strong><?php echo $sf_user->getGuardUser() ?></strong>
             <?php echo link_to('Sign Out', 'sf_guard_signout') ?>
           <?php else: ?>
             <?php echo link_to('Sign In', 'sf_guard_signin') ?>
