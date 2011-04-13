@@ -16,12 +16,14 @@ generator:
 
     config:
       actions:
-        make_assistant:
-          title:    Make %%to_string%% an assistant
+        toggle_assistant_status:
+          label:        %%assistant_status%%
+          object_link:  true
+          method:       post
           # this works, but is not recommended:
-          # route:    @sf_guard_user_edit?id=%%id%% 
+          # route:    @sf_guard_user_toggle_assistant_status?id=%%id%% 
           # use this instead:
-          route:    sf_guard_user_make_assistant
+          route:        sf_guard_user_toggle_assistant_status
       fields:
         # credit card fields are only visible to the admin everywhere in the module
         credit_card_number: { credentials: [admin] }
@@ -44,6 +46,7 @@ generator:
         # This could also be:
         # title: Edit '%%to_string%%'
         title:  Edit '%%first_name%% %%last_name%%'
+        actions: [save, delete, toggle_assistant_status, cancel]
       new:     ~
       show:
         title:  '%%first_name%% %%last_name%%'

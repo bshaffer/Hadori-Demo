@@ -47,6 +47,7 @@
   <?php echo link_to('Delete', 'sf_guard_user_delete', $sf_guard_user, array(  'class' => 'delete',  'method' => 'delete',  'confirm' => __('Are You Sure?', array(), 'messages'))) ?>
 <?php endif; ?>
   
+    <?php echo link_to($sf_guard_user->getAssistantStatus(), 'sf_guard_user_toggle_assistant_status', $sf_guard_user, array(  'class' => 'toggle_assistant_status',  'method' => 'post')) ?>  
   <?php endif; ?>
   </p>
 </form>

@@ -12,4 +12,8 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+  public function getAssistantStatus()
+  {
+    return $this->hasPermission('assistant') ? 'Demote From Assistant' : 'Make Assistant';
+  }
 }

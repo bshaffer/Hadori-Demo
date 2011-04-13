@@ -28,6 +28,13 @@ pull_request:
     with_wildcard_routes: true
     with_export:          true
 
+sf_guard_user_toggle_assistant_status:
+  url:      /user/:id/toggleAssistantStatus
+  class:    sfDoctrineRoute
+  options:  { type: object, model: sfGuardUser }
+  params:   { module: sf_guard_user, action: toggleAssistantStatus }
+  requirements: { sf_method: [post] }
+
 sf_guard_user:
   class: sfHadoriRouteCollection
   options:
