@@ -1,0 +1,5 @@
+/*@group custom actions*/
+.actions .toggle_assistant_status {
+  background: transparent url(../images/badge.gif) no-repeat left center;
+}
+/*@end*/
