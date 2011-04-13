@@ -1,5 +1,5 @@
 tag:
-  class: sfHadoriAdminRouteCollection
+  class: sfHadoriRouteCollection
   options:
     model:                Tag
     module:               tag
@@ -9,7 +9,7 @@ tag:
     with_export:          true
 
 issue:
-  class: sfHadoriAdminRouteCollection
+  class: sfHadoriRouteCollection
   options:
     model:                Issue
     module:               issue
@@ -19,7 +19,7 @@ issue:
     with_export:          true
 
 pull_request:
-  class: sfHadoriAdminRouteCollection
+  class: sfHadoriRouteCollection
   options:
     model:                PullRequest
     module:               pull_request
@@ -29,7 +29,7 @@ pull_request:
     with_export:          true
 
 sf_guard_user:
-  class: sfHadoriAdminRouteCollection
+  class: sfHadoriRouteCollection
   options:
     model:                sfGuardUser
     module:               sf_guard_user
