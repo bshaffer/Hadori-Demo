@@ -1,7 +1,10 @@
 Hadori Demo
 ===========
 
-Please view this demo at [http://brentertainment.com/hadori](http://brentertainment.com/hadori)
+This is the code used for the [Hadori Theme Generator Demo](http://brentertainment.com/hadori).  It uses the [sfHadoriThemePlugin](http://github.com/bshaffer/sfHadoriThemePlugin) to create an administrative backend.  Please use this to get a general idea how Hadori can be used as a backend for your website.
+
+Installation
+------------
 
 In order to get this project off the ground, follow these steps:
 
