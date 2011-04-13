@@ -39,5 +39,5 @@ What Should I Do Now?
 There are a few *very helpful* files you should check out to learn more about Hadori:
 
 - [app/frontend/modules/sf_guard_user/config/generator.yml](https://github.com/bshaffer/Hadori-Demo/blob/master/apps/frontend/modules/sf_guard_user/config/generator.yml): contains a lot of diverse configuration examples!
-- [cache/frontend/prod/modules/autoSf_guard_user/actions/actions.class.php](https://github.com/bshaffer/Hadori-Demo/blob/master/cache/frontend/prod/modules/autoSf_guard_user/actions/actions.class.php): behold your beautifully generated actions
-- [cache/frontend/prod/modules/autoSf\guard_user/templates](https://github.com/bshaffer/Hadori-Demo/tree/master/cache/frontend/prod/modules/autoSf_guard_user/templates): behold your beautiful generated templates!
+- [cache/frontend/prod/modules/autoSf_guard_user/actions/actions.class.php](https://github.com/bshaffer/Hadori-Demo/blob/master/cache/frontend/prod/modules/autoSf_guard_user/actions/actions.class.php): behold your beautifully generated actions!
+- [cache/frontend/prod/modules/autoSf\guard_user/templates](https://github.com/bshaffer/Hadori-Demo/tree/master/cache/frontend/prod/modules/autoSf_guard_user/templates): behold your beautifully generated templates!
