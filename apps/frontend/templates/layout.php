@@ -11,6 +11,7 @@
   </head>
   <body>
       <div id="header">
+        <?php include_partial('global/github_ribbon') ?>
         <div id="public-nav">
           <?php if ($sf_user->isAuthenticated()): ?>
             <strong><?php echo $sf_user->getGuardUser() ?></strong>
@@ -36,6 +37,7 @@
           </div>
         </div>
       </div>
+      <div id="footer">© 2011 Brent Shaffer</div>
   </body>
 </html>
 

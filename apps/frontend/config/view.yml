@@ -16,7 +16,9 @@ default:
     - /sfHadoriThemePlugin/css/hadori.css
     - style.css
 
-  javascripts:     []
+  javascripts:
+    - /sfHadoriThemePlugin/js/jquery-1.4.2.min.js
+    - /sfHadoriThemePlugin/js/hadori.js
 
   has_layout:     true
   layout:         layout
