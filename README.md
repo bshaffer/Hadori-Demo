@@ -32,3 +32,12 @@ Fix permissions for good measures
 And as always, publish them assets!
 
       $ php symfony plugin:publish-assets 
+
+What Should I Do Now?
+---------------------
+
+There are a few *very helpful* files you should check out to learn more about Hadori:
+
+- app/frontend/modules/sf\_guard\_user/config/generator.yml: contains a lot of diverse configuration examples!
+- cache/frontend/prod/modules/autoSf\_guard\_user/actions/actions.class.php: behold your beautifully generated actions
+- cache/frontend/prod/modules/autoSf\_guard\_user/templates: behold your beautiful generated templates!
