@@ -10,6 +10,11 @@
  */
 class sf_guard_userActions extends autoSf_guard_userActions
 {
+  /**
+   * toggleAssistantStatus
+   *
+   * Custom Admin Action to promote or demote the user for whom the action is called
+   */
   public function executeToggleAssistantStatus(sfWebRequest $request)
   {
     $user = $this->getRoute()->getObject();
@@ -34,6 +39,12 @@ class sf_guard_userActions extends autoSf_guard_userActions
     $this->redirect($this->getReferer('@sf_guard_user'));
   }
 
+  /**
+   * getBaseQuery
+   *
+   * The best way to modify the query for your list/export views
+   * - This query is being used to exclude certain users from the list
+   */
   protected function getBaseQuery()
   {
     return Doctrine_Core::getTable('sfGuardUser')
